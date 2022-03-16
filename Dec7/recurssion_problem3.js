@@ -26,4 +26,33 @@ output: [1,2]
 explanation: [b,c]
 
 Note: solve this problem recursively since we are learning recurssion.
+
+Approach:- step1:- lets define a function with two parameters which are start = 0 and n
+step2:- we will print 0 first
+step3:- we will print 1 and then we will print all the numbers starting with 1 up to number n ex: 10,100,1000,11,110,12,120, and so on
+and similarly for 2, 3 and so on till 9
+step4:- recurssive assumption: f(10 * start + i) for all i belonging to 0 to 9
+
+
 */
+
+function f(start, n) {
+    if(start > n) {
+        return
+    }
+    console.log(start);
+
+    if(start == 0) {
+        for(let i = 1; i <= 9; i++) {
+            f(10 * start + i, n);
+        }
+    }
+    else {
+        for(let i = 0; i <=9; i++) {
+            f(10 * start + i, n);
+        }
+    }
+}
+
+f(0,13);
+

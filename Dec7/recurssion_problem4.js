@@ -35,7 +35,7 @@ function f(row, col, n) {
         return;
     }
     else {
-        process.stdin.write("* "); //used to print coontinuous *'s in a single row
+        process.stdin.write("* "); //used to print continuous *'s in a single row
         f(row, col+1, n);
     }
 }

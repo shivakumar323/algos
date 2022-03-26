@@ -1,4 +1,4 @@
-//important questiion - very useful in programming journey
+//important question - very useful in programming journey
 //Given a string, calculate and print all possible subsequencs
 //of the string recursively
 //hint - how do you generate all the possible subsets of a given set

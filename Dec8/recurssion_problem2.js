@@ -49,3 +49,70 @@ so we are passing it in the form of array(pass by reference, array itself is sen
 */
 
 f(str, 0);
+
+/*
+dry run
+str = abc, i = 0
+f(abc, 0):
+    j = 0:
+        swap(str, 0, 0):
+            str = abc
+        f(abc, 1):
+            j = 1:
+                swap(abc, 1, 1):
+                    str = abc
+                f(abc, 2):
+                    print abc
+                swap(abc, 1, 1):
+                    str = abc
+            j = 2:
+                swap(abc, 1, 2):
+                    str = acb
+                f(acb, 2):
+                    print acb
+                swap(acb, 1, 2):
+                str = abc
+        swap(abc, 0, 0):
+            str = abc
+    j = 1:
+        swap(abc, 0, 1):
+            str = bac
+        f(bac, 1):
+            j = 1:
+                swap(bac, 1, 1):
+                    str = bac
+                f(bac, 2):
+                    print bac
+                swap(bac, 1, 1):
+                    str = bac
+            j = 2:
+                swap(bac, 1, 2):
+                    str = bca
+                f(bca, 2):
+                    print bca
+                swap(bca, 1, 2):
+                    str = bac   
+        swap(bac, 0, 1):
+            str = abc 
+    j = 2:
+        swap(abc, 0, 2):
+            str = cba
+        f(cba, 1):
+            j = 1:
+                swap(bac, 1, 1):
+                    str = cba
+                f(bac, 2):
+                    print = cba
+                swap(bac, 1, 1):
+                    str = cba
+            j = 2:
+                swap(bac, 1, 2):
+                    str = cab
+                f(cab, 2):
+                    print cab
+                swap(bac, 1, 2):
+                    str = cba
+        swap(cba, 0, 2):
+            str = abc
+
+*/

@@ -50,3 +50,24 @@ function f(str, output) { // str  = "abc", output = ""
 
 f("abc", "");
 
+/*
+1.f(ab, "")
+ch = a
+ros = b
+    f(b,a)
+    ch = b
+    ros = ""
+        f("", ab)
+            print ab
+        f("", a)
+            print a
+    f(b,"")
+    ch = b
+    ros = ""
+        f("", b)
+            print(b)
+        f("", "")
+            print ""
+    
+*/
+

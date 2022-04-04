@@ -31,7 +31,7 @@ Sum of all elements of C = 5+45+10+20+1+9+2+4+2+18+4+8+3+27+6+12 = 176
 
 */
 process.stdin.resume();
-process.stdin.setEncoding("utf-8");
+process.stdin.setEncoding('utf-8');
 
 let inputString = "";
 

@@ -1,21 +1,53 @@
-function f(str) {
-    str = str.split(' ');
+let x1 = 7; 
+let y1 = 7;
+
+let x = 3; 
+let y = 4;
+let y2 = y;
+let y3 = y;
+y4 = y;
+
+let A = [];
+A.push(x);
+A.push(y);
+A.push(' ');
+for(let j = x - 1; j >= 0; j--) {
     
-    let r1 = [];
-    for(let i = 0; i < str.length; i++) {
-        let word = str[i];
-        for(let j = 0; j < word.length; j++) {
-            if(!isNaN(word[j])) {
-                let n = word[j];
-                let newword = word.replace(n, '');
-               // word.splice(j, 1);
-                r1[n - 1] = newword;
-                break;
-                //console.log(word[j]);
-            }
-        }
-        //console.log(word);
+    y3 -= 1;
+    if(y3 >= 0) {
+        A.push(j);
+        A.push(y3);
+        A.push(' ');
     }
-    console.log(r1);
+    
+    
+    y4 += 1;
+    if(y4 <= x1) {
+        A.push(j);
+        A.push(y4);
+        A.push(' ');
+    }
+    
 }
-f("is2 this1 t4test 3a");
+
+for(let i = x + 1; i <= x1; i++) {
+
+    y += 1;
+    if(y <= x1) {
+        A.push(i);
+        A.push(y);
+        A.push(' ');
+    }
+    
+    
+    y2 -= 1;
+    if(y2 >= 0) {
+        A.push(i);
+        A.push(y2);
+        A.push(' ');
+    }
+    
+
+}
+
+console.log(A);

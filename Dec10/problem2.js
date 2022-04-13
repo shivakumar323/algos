@@ -2,54 +2,37 @@
 /*
 given a n * n matrix find out the position where a camel can travel from a given position (i, j)
 */
-n = 4
-A = [];
-i = 2;
-j = 2;
-function f1(x, y) { // function to move camel to bottom right direction 
-    if(x >= n || y >= n || x < 0 || y < 0) {
-        return;
-    }
-    A.push(x, y);
-    A.push(' ');
+let n = 3;
+let A = [];
+let i = 1;
+let j = 2;
+let count = 1;  
 
-    f1(x + 1, y + 1);
-}
-function f2(x, y) {  // function to move camel towards bottom left
-    if(x >= n || y >= n || x < 0 || y < 0) {
+function f(x, y) {  // function to move camel towards top right and top left directions
+    if(x > n || y > n || x < 0 || y < 0) {
+        x = i; // bringing back camel to its original position
+        y = j;
+        count++; // count represents direction here, after reaching border or end point we are changing the direction
+        f(x, y);
         return;
     }
-    if(x != i && j != y) {
+    if(x != i && y != j) {  // to avoid duplicates in array A
         A.push(x, y);
         A.push(' ');
     }
-    f2(x + 1, y - 1);
+    if(count == 1) {
+        f(x - 1, y - 1);  // top left
+    }
+    if(count == 2) {
+        f(x - 1, y + 1); // top right
+    }
+    if(count == 3) {
+        f(x + 1, y - 1); // bottom left
+    }
+    if(count == 4) {
+        f(x + 1, y + 1); // bottom right
+    }
 }
 
-function f3(x, y) { // function to move camel towards top right direction
-    if(x >= n || y >= n || x < 0 || y < 0) {
-        return;
-    }
-    if(x != i && j != y) {
-        A.push(x, y);
-        A.push(' ');
-    }
-    f3(x - 1, y + 1);
-}
-
-function f4(x, y) {  // function to move camel towards top left direction
-    if(x >= n || y >= n || x < 0 || y < 0) {
-        return;
-    }
-    if(x != i && j != y) {
-        A.push(x, y);
-        A.push(' ');
-    }
-    f4(x - 1, y - 1);
-}
-
-f1(i, j);
-f2(i, j);
-f3(i, j);
-f4(i, j);
+f(i, j);
 console.log(A);

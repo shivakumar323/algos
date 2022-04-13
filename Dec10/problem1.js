@@ -57,7 +57,7 @@ function f(x, y) {
     if(grid[x][y] == 1) {  // blocked cell
         return 0; // we should not go here  
     }
-    if(x == n - 1 && y == n - 1) {
+    if(x == n - 1 && y == n - 1) {  // if we reach destination then we have to increment no of path
         return 1;
     }
 

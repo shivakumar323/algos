@@ -1,7 +1,4 @@
-let n = 3;
-let str = "sammi";
-console.log(str.length);
-let str_arr = str.split('');
-console.log(str_arr);
-str_arr[0] = "33";
-console.log(str_arr);
+let a = [1,2];
+let b = [3,4];
+let c = a.concat(b);
+console.log(c);

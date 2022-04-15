@@ -2,10 +2,10 @@
 /*
 given a n * n matrix find out the position where a camel can travel from a given position (i, j)
 */
-let n = 3;
+let n = 7;
 let A = [];
-let i = 1;
-let j = 2;
+let i = 3;
+let j = 4;
 let count = 1;  
 
 function f(x, y) {  // function to move camel towards top right and top left directions

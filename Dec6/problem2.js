@@ -24,9 +24,9 @@ Examples
 inputCopy
 3 3
 5 3 2
-1 2
-2 3
-1 3
+1 2   => 1 to 2
+2 3   => 2 to 3
+1 3   => 1 to 3 (1st to 3rd index)
 outputCopy
 25
 inputCopy

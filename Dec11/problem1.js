@@ -6,7 +6,7 @@ Given a below two dimensional array:
      7,8,9,10,11,12
      13,14,15,16,17,18]
 
-     print the elements in array in spiral order in clockwise direction (refer screenshot for more clarity on spiral order)
+     print the elements of array in spiral order in clockwise direction (refer screenshot for more clarity on spiral order)
 
 approach - from the start position keep traversing in straight direction until:
     1. you hit the boundary

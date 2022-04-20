@@ -36,19 +36,19 @@ function spiralprint(arr) {
         }
         n--;  // since we are done with printing last column we will decrement it by 1
         
-        if(r < m) {
-            for(i = n - 1; i >= c; i--) { // printing the bottom row
-                console.log(arr[m - 1][i] + ' ');
-            }
-            m--; // when done printing the bottom row decrement it by 1
-        }
         
-        if(c < n) {
-            for(i = m - 1; i >= r; i--) {
-                console.log(arr[i][c] + ' ');
-            }
-            c++;     
+        for(i = n - 1; i >= c; i--) { // printing the bottom row
+            console.log(arr[m - 1][i] + ' ');
         }
+        m--; // when done printing the bottom row decrement it by 1
+        
+        
+        
+        for(i = m - 1; i >= r; i--) {
+            console.log(arr[i][c] + ' ');
+        }
+        c++;     
+        
         
     }
 

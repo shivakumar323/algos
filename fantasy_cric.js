@@ -1,7 +1,7 @@
 let max_teams = 30;
 let start = 0;
-let end = 5;
-let batsmen = ["Dhawan", "shaw", "Jitesh", "Lalit", "Mayank", "Warner", "Sharukh", "Rovman", "Odean", "Shardul", "Bairstow", "Axar"];
+let end = 7;
+let batsmen = ["Moeen", "Surya", "Rayudu", "Tilak", "Gaikwad", "Rohit", "Shivam", "Brevis", "Bravo", "Pollard", "Jadeja", "Uttappa"];
 //let batsmen = [0,1,2,3,4,5,6,7,8,9];
 let team = 0;
 let teams = [];

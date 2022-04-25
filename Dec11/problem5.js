@@ -43,7 +43,7 @@ for(let i = 0; i < l; i++) {
 for(let i = 0; i < m; i++) {
     for(let j = 0; j < n; j++) {
         let sum = i + j;
-        a[sum].push(arr[i][j]);
+        a[sum].unshift(arr[i][j]); // unshift method is used to append the element at the beginning of an array
     }
 }
 console.log(a);

@@ -44,16 +44,17 @@ output:
 { a: 1 }
 { a: 5 }
 { a: 5 }
+
+In js arrays and ojects are called by reference
+
+when you copy an object a new copy of object is not created instead a reference to object is created
+i.e., let us say there is an object called obj with below structure
+var obj = {a: 5};
+now, if we try to make a copy of object obj 
+obj_copy = obj
+when we created obj_copy and assigned obj to it, a copy of new object is not created and assigned to it
+instead obj_copy will now refence to the object obj itself. i.e., obj_copy will refer to {a: 5}
+
+
 */
-
-function change(obj) {
-    obj.a = 5;
-    console.log(obj);
-}
-
-var obj = {a: 1};  
-
-console.log(obj);
-change(obj);
-console.log(obj);
 

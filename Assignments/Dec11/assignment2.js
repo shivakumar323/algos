@@ -29,7 +29,7 @@ Hence the second row having four 1’s has the maximum count of 1’s.
 */
 
 process.stdin.resume();
-process.stdin.setEmcoding('utf-8');
+process.stdin.setEncoding('utf-8');
 
 let inputString = "";
 

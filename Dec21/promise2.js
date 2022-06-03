@@ -29,7 +29,7 @@ Note: the reason for getting promises executing first or
 getting iy above the set timeout is, in js there will be two queue's
 namely macro tasks queue and micro tasks queue
 after executing the code which is native to js, the tasks which are loaded
-in micro tasks queue is executed  and then micro tasks queue is executed
+in micro tasks queue is executed  and then macro tasks queue is executed
 
 promises will be moved to micro tasks queue and set timeout function will be moved to 
 macro tasks queue
